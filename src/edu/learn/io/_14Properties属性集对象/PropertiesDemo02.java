@@ -18,11 +18,11 @@ public class PropertiesDemo02 {
     public static void main(String[] args) throws Exception {
         // 1.创建一个属性集对象
         Properties properties = new Properties();
-        System.out.println(properties);
+        System.out.println(properties);//空
 
         // 2.字节输入流加载属性文件的数据到属性集对象properties中去。
-        properties.load(new FileInputStream("Day10Demo/src/users.properties"));
-        System.out.println(properties);
+        properties.load(new FileInputStream("src/edu/learn/io/users.properties"));
+        System.out.println(properties);//所有键值对
 
         System.out.println(properties.getProperty("dlei"));
         System.out.println(properties.getProperty("admin"));

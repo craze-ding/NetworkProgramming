@@ -27,9 +27,9 @@ public class ExecDemo {
         try(
                 // （1）创建一个缓冲字符输入流对象包装字符输入流接通源文件。
                 BufferedReader br =
-                        new BufferedReader(new FileReader("Day10Demo/src/csb"));
+                        new BufferedReader(new FileReader("src/edu/learn/io/csb"));
                 // （5）创建一个缓冲字符输出流管道通向目标文件。
-                BufferedWriter bw = new BufferedWriter(new FileWriter("Day10Demo/src/newcsb"));
+                BufferedWriter bw = new BufferedWriter(new FileWriter("src/edu/learn/io/csbnewcsb"));
                 ){
 
             // （2）定义一个List集合用于存储每段文章。

@@ -22,7 +22,7 @@ import java.io.*;
 public class OutputStreamWriterDemo02 {
     public static void main(String[] args) throws Exception {
         // 1.写一个字节输出流通向文件
-        OutputStream os = new FileOutputStream("Day10Demo/src/dlei07.txt");
+        OutputStream os = new FileOutputStream("src/edu/learn/io/dlei02.txt");
 
         // 2.把字节输出流转换成字符输出流。
         // Writer fw = new OutputStreamWriter(os); // .把字节输出流按照默认编码UTF-8转换成字符输出流。

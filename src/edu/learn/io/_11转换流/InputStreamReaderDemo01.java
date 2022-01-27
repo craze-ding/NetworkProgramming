@@ -30,9 +30,9 @@ public class InputStreamReaderDemo01 {
     public static void main(String[] args) throws Exception {
         // 代码：UTF-8    文件：GBK(ab我爱你： o o [oo] [oo] [oo])
         // 1.提取GBK文件的原始字节流
-        InputStream is = new FileInputStream("D:\\itcast\\网络编程公开课\\Netty.txt");
+        InputStream is = new FileInputStream("F:\\Java开发\\java\\第4阶段热门技术框架\\rabbitMQ\\资料-rabbitMQ\\镜像环境安装.txt");
         // 2.把原始字节输入流通过转换流，转换成 字符输入转换流InputStreamReader
-        //Reader isr = new InputStreamReader(is); // 使用当前代码默认编码UTF-8转换成字符流，几乎不用！
+        // Reader isr = new InputStreamReader(is); // 使用当前代码默认编码UTF-8转换成字符流，几乎不用！
         Reader isr = new InputStreamReader(is,"GBK"); // 指定编码把字节流转换成字符流
         // 3.包装成缓冲流
         BufferedReader br = new BufferedReader(isr);

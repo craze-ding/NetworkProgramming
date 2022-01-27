@@ -31,23 +31,24 @@ import java.io.Reader;
 public class BufferedReaderDemo01 {
     public static void main(String[] args) throws Exception {
         // 1.定义一个原始的字符输入流读取源文件
-        Reader fr = new FileReader("Day10Demo/src/dlei06.txt");
+        Reader fr = new FileReader("src/edu/learn/io/dlei01.txt");
 
         // 3.把低级的字符输入流管道包装成一个高级的缓冲字符输入流管道
         BufferedReader br = new BufferedReader(fr);
         // 定义一个字符串变量存储每行数据
-        String line;
-        // 使用一个循环读取数据(经典代码)
-        while((line = br.readLine())!=null){
-            System.out.println(line);
-        }
+        // String line;
+        // // 使用一个循环读取数据(经典代码)
+        // while((line = br.readLine())!=null){
+        //     System.out.println(line);
+        // }
 
 //        // 2.定义一个字符数组循环读取
-//        char[] buffer = new char[1024];
-//        int len ;
-//        while((len = br.read(buffer))!=-1){
-//            System.out.println(new String(buffer , 0 , len));
-//        }
+       char[] buffer = new char[1024];
+       int len ;
+       while((len = br.read(buffer))!=-1){
+           System.out.println(new String(buffer , 0 , len));
+       }
+        // System.out.println(len);
 
         br.close();
     }

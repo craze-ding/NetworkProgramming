@@ -26,15 +26,15 @@ import java.io.Writer;
 public class BufferedWriterDemo02 {
     public static void main(String[] args) throws Exception {
         // 1.定义一个低级的字符输出流写数据出去
-        Writer fw = new FileWriter("Day10Demo/src/dlei07.txt",true);
+        Writer fw = new FileWriter("src/edu/learn/io/dlei01.txt",true);
 
         // 3.把低级的字符输出流包装成高级的缓冲字符输出流
         BufferedWriter bw = new BufferedWriter(fw);
 
         // 2.写字符输出
-        bw.write("我在黑马学IO流~~~~");
+        bw.write("我在学IO流~~~~");
         bw.newLine(); // 换行
-        bw.write("我在黑马学IO流~~~~");
+        bw.write("我在学IO流~~~~");
         bw.newLine();// 换行
 
         bw.close();

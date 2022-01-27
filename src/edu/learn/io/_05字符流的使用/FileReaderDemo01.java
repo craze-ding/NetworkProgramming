@@ -33,7 +33,7 @@ public class FileReaderDemo01 {
         // 2.创建一个字符输入流管道与源文件接通
         // Reader fr = new FileReader(f);
         // 3.简化写法：创建一个字符输入流管道与源文件路径接通
-        Reader fr = new FileReader("Day10Demo/src/dlei01.txt");
+        Reader fr = new FileReader("src/edu/learn/io/dlei01.txt");
         // 4.按照字符读取，每次读取一个字符的编号返回。
 //        int code1 = fr.read();
 //        System.out.print((char)code1);

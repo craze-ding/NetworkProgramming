@@ -37,7 +37,7 @@ import java.io.ObjectInputStream;
 public class SerializeDemo02 {
     public static void main(String[] args) throws Exception {
         // 1.定义一个低级的字节输入流通向源文件
-        InputStream is = new FileInputStream("Day10Demo/src/obj.dat");
+        InputStream is = new FileInputStream("src/edu/learn/io/obj.dat");
         // 2.把字节输入流包装成高的对象字节输入流
         ObjectInputStream ois = new ObjectInputStream(is);
         // 3.反序列化
@@ -46,3 +46,4 @@ public class SerializeDemo02 {
         System.out.println("反序列化完成！");
     }
 }
+

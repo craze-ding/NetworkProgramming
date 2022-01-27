@@ -29,7 +29,7 @@ import java.io.Reader;
 public class FileReaderDemo02 {
     public static void main(String[] args) throws Exception {
         // 1.创建一个字符输入流管道与源文件接通
-        Reader fr = new FileReader("Day10Demo/src/dlei02.txt");
+        Reader fr = new FileReader("src/edu/learn/io/dlei01.txt");
         // 2.按照字符数组读取内容
 //        char[] buffer = new char[3];
 //        int len = fr.read(buffer);

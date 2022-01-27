@@ -11,15 +11,15 @@ import java.io.*;
         （3）使用高级的缓冲字节流按照一个一个字节的形式复制文件。
         （4）使用高级的缓冲字节流按照一个一个字节数组的形式复制文件。
 
-    源文件：D:\itcast\班级\Java就业128期\day08\15.并发包ConcurrentHashMap.avi
-    目标文件：D:\itcast\班级\new新视频.avi
+    源文件：‪F:\Java开发\java\第1阶段Java基础+编程强化\java基础回顾资料\java基础回顾资料\回顾视频\第十天视频\07.字节缓冲流的性能分析.avi
+    目标文件：D:\new新视频.avi
 
     小结：
         高级的字节缓冲流按照一个一个字节数组的形式复制性能极高，建议以后使用！
  */
 public class CopyDemo {
-    public static final String SRC_FILE = "D:\\itcast\\班级\\Java就业128期\\day08\\15.并发包ConcurrentHashMap.avi";
-    public static final String DEST_FIlE = "D:\\itcast\\班级\\";
+    public static final String SRC_FILE = "F:\\Java开发\\java\\第1阶段Java基础+编程强化\\java基础回顾资料\\java基础回顾资料\\回顾视频\\第十天视频\\07.字节缓冲流的性能分析.avi";
+    public static final String DEST_FIlE = "D:\\demo\\";
     public static void main(String[] args) {
         // copy01(); // 低级流一个一个字节复制，速度太慢，简直让人无法忍受，直接淘汰，禁止使用！
         copy02(); // 低级的字节流按照一个一个字节数组的形式复制 ,读取较慢。5.264s

@@ -10,7 +10,7 @@ import java.io.PrintStream;
  */
 public class PrintStreamDemo02 {
     public static void main(String[] args) throws Exception {
-        System.out.println("==itheima0==");
+        System.out.println("==0==");
         PrintStream ps = new PrintStream("Day10Demo/src/log.txt");
         System.setOut(ps); // 让系统的输出流向打印流。
 

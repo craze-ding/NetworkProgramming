@@ -27,7 +27,7 @@ public class PrintStreamDemo01 {
 
         ps.println(97); // 写97
         ps.println(110); // 写110
-        ps.println("我在黑马快乐的调皮~~");
+        ps.println("我在快乐的调皮~~");
         ps.println(99.8);
         ps.println(false);
         ps.println('徐');

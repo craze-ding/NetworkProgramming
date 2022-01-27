@@ -40,17 +40,17 @@ public class FileWriterDemo03 {
     public static void main(String[] args) throws Exception {
         // 1.创建一个字符输出流管道通向目标文件路径
         //Writer fw = new FileWriter("Day10Demo/src/dlei03.txt"); // 覆盖数据管道
-        Writer fw = new FileWriter("Day10Demo/src/dlei03.txt",true); // 追加数据管道
+        Writer fw = new FileWriter("src/edu/learn/io/dlei01.txt",true); // 追加数据管道
 
         // 2.写一个字符出去：public void write(int c):写一个字符出去
         fw.write(97);   // 字符a
         fw.write('b');  // 字符b
-        fw.write('磊'); // 字符磊，此时没有任何问题。
+        fw.write('磊'); // 字符磊，此时没有任何问题！！！
         fw.write("\r\n"); // 换行
 
         // 3.写一个字符串出去：public void write(String c)写一个字符串出去：
         fw.write("Java是最优美的语言！");
-        fw.write("我们在黑马学习它！");
+        fw.write("我们在学习它！");
         fw.write("\r\n"); // 换行
 
         // 4.写一个字符数组出去：public void write(char[] buffer):写一个字符数组出去

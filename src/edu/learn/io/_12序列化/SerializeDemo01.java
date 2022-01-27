@@ -34,7 +34,7 @@ public class SerializeDemo01 {
         // 1.创建User用户对象
         User user = new User("tsgz","003197","铁扇公主");
         // 2.创建低级的字节输出流通向目标文件
-        OutputStream os = new FileOutputStream("Day10Demo/src/obj.dat");
+        OutputStream os = new FileOutputStream("src/edu/learn/io/obj.dat");
         // 3.把低级的字节输出流包装成高级的对象字节输出流ObjectOutputStream
         ObjectOutputStream oos = new ObjectOutputStream(os);
         // 4.通过对象字节输出流序列化对象：

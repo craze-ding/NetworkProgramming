@@ -27,7 +27,7 @@ import java.io.InputStream;
 public class BufferedInputStreamDemo01 {
     public static void main(String[] args) throws Exception {
         // 1.定义一个低级的字节输入流与源文件接通
-        InputStream is = new FileInputStream("Day10Demo/src/dlei04.txt");
+        InputStream is = new FileInputStream("src/edu/learn/io/dlei01.txt");
 
         // 3.把低级的字节输入流包装成一个高级的缓冲字节输入流。
         BufferedInputStream bis = new BufferedInputStream(is);
