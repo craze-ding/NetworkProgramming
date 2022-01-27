@@ -1,9 +1,6 @@
 package edu.learn.io._04字节流做文件复制;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 /**
     目标：字节流做文件复制。
@@ -22,6 +19,8 @@ import java.io.OutputStream;
         （3）创建一个字节数组作为桶
         （4）从字节输入流管道中读取数据，写出到字节输出流管道即可。
         （5）关闭资源！
+    小结:
+        字节流非常适合做文件数据的复制
  */
 public class CopyDemo01 {
     public static void main(String[] args) {
@@ -29,9 +28,9 @@ public class CopyDemo01 {
         OutputStream os = null ;
         try{
             /** （1）创建一个字节输入流管道与源文件接通。 */
-            is = new FileInputStream("D:\\itcast\\图片资源\\meinv.jpg");
+            is = new FileInputStream("C:\\Users\\leet_\\OneDrive\\图片\\IU\\cc9c98848b6064915a335180d395a7fa.jpeg");
             /** （2）创建一个字节输出流与目标文件接通。*/
-            os = new FileOutputStream("D:\\itcast\\meimei.jpg");
+            os = new FileOutputStream("C:\\Users\\leet_\\Desktop\\NetworkProgramming\\src\\edu\\learn\\io\\iu.jpeg");
             /** （3）创建一个字节数组作为桶*/
             byte[] buffer = new byte[1024];
             /** （4）从字节输入流管道中读取数据，写出到字节输出流管道即可。*/
@@ -45,12 +44,21 @@ public class CopyDemo01 {
             e.printStackTrace();
         } finally {
             /**（5）关闭资源！ */
-            try{
-                if(os!=null)os.close();
-                if(is!=null)is.close();
-            }catch (Exception e){
-                e.printStackTrace();
+            if(os!=null) {
+                try {
+                    os.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+            if(is!=null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
     }
 }
