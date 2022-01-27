@@ -24,9 +24,9 @@ public class CopyDemo02 {
     public static void main(String[] args) {
         try(
                 /** （1）创建一个字节输入流管道与源文件接通。 */
-                InputStream is  = new FileInputStream("D:\\itcast\\图片资源\\meinv.jpg");
+                InputStream is  = new FileInputStream("D:\\xxzz\\图片资源\\xxx.jpg");
                 /** （2）创建一个字节输出流与目标文件接通。*/
-                OutputStream os = new FileOutputStream("D:\\itcast\\meimei.jpg");
+                OutputStream os = new FileOutputStream("D:\\xxxx\\xxxx.jpg");
                 /** （5）关闭资源！是自动进行的 */
         ){
             /** （3）创建一个字节数组作为桶*/
