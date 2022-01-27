@@ -9,7 +9,7 @@ public class Server {
 	public static void main(String[] args) {
 		try {
 			System.out.println("----------服务端启动成功------------");
-			ServerSocket ss = new ServerSocket(9999);
+			ServerSocket ss = new ServerSocket(7777);
 
 			// 一个服务端只需要对应一个线程池
 			HandlerSocketThreadPool handlerSocketThreadPool =

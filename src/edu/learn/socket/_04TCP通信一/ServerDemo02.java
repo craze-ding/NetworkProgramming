@@ -19,7 +19,7 @@ public class ServerDemo02 {
     public static void main(String[] args) throws Exception {
         System.out.println("----服务端启动----");
         // 1.注册端口: public ServerSocket(int port)
-        ServerSocket serverSocket = new ServerSocket(9999);
+        ServerSocket serverSocket = new ServerSocket(7777);
         // 2.开始等待接收客户端的Socket管道连接。
         Socket socket = serverSocket.accept();
         // 3.从socket通信管道中得到一个字节输入流。
@@ -30,6 +30,7 @@ public class ServerDemo02 {
         BufferedReader br = new BufferedReader(isr);
         // 6.按照行读取消息 。
         String line ;
+        //特别要注意用if，而while()将报异常,从scket中拿时，发一行就收一行
         if((line = br.readLine())!=null){
             System.out.println(line);
         }

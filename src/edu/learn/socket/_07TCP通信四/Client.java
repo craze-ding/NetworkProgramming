@@ -24,7 +24,7 @@ public class Client {
 		try {
 			// 1.客户端要请求于服务端的socket管道连接。
 			// Socket(String host, int port)
-			Socket socket = new Socket("127.0.0.1" , 9999);
+			Socket socket = new Socket("127.0.0.1" , 7777);
 			// 2.从socket通信管道中得到一个字节输出流
 			OutputStream os = socket.getOutputStream();
 			// 3.把低级的字节输出流包装成高级的打印流。

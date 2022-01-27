@@ -6,8 +6,8 @@ import java.net.Socket;
 /**
      目标：实现客户端上传图片给服务端保存起来。
 
-     开发客户端：本地图片:  ‪D:\itcast\图片资源\beautiful.jpg
-     开发服务端：服务器路径： D:\itcast\约吧图片服务器
+     开发客户端：本地图片:  ‪D:\图片资源\beautiful.jpg
+     开发服务端：服务器路径： D:\约吧图片服务器
  */
 public class ClientDemo {
     // 本地图片路径、
@@ -27,8 +27,8 @@ public class ClientDemo {
             bos.write(buffer, 0 ,len);
         }
         bos.flush(); // 刷新图片数据到服务端！！
-        socket.shutdownOutput(); // 告诉服务端我的数据已经发送完毕，请不要在等我了！
-        bis.close(); // 可以关闭
+        socket.shutdownOutput(); // 告诉服务端我的数据已经发送完毕，请不要在等我了！!
+        bis.close(); // 本地读文件，可以关闭
 
         // 6.等待着服务端的响应数据！！
         BufferedReader  br = new BufferedReader(new InputStreamReader(socket.getInputStream()));

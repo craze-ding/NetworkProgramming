@@ -62,12 +62,12 @@ public class ClientDemo01 {
     public static void main(String[] args) throws Exception {
         // 1.客户端要请求于服务端的socket管道连接。
         // Socket(String host, int port)
-        Socket socket = new Socket("127.0.0.1" , 9999);
+        Socket socket = new Socket("127.0.0.1" , 7777);
         // 2.从socket通信管道中得到一个字节输出流
         OutputStream os = socket.getOutputStream();
         // 3.把低级的字节输出流包装成高级的打印流。
         PrintStream ps = new PrintStream(os);
-        // 4.开始发消息出去
+        // 4.开始发消息出去//按行发就要按行收！
         ps.println("我是客户端，喜欢你很久了，第一次给你发消息，只想说：约吗？");
         ps.flush();
         System.out.println("客户端发送完毕~~~~");

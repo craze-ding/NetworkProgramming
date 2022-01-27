@@ -40,7 +40,7 @@ class ServerReaderThread extends Thread{
             BufferedInputStream bis = new BufferedInputStream(is);
             // 3.定义一个缓冲字节输出流通向目标路径（服务端路径）
             BufferedOutputStream bos =
-                    new BufferedOutputStream(new FileOutputStream(Constants.SERVER_DIR+ UUID.randomUUID().toString()+".jpg"));
+                    new BufferedOutputStream(new FileOutputStream(Constants.SERVER_DIR+ UUID.randomUUID().toString()+".jpeg"));
             byte[] buffer = new byte[1024];
             int len ;
             while((len = bis.read(buffer)) != -1) {

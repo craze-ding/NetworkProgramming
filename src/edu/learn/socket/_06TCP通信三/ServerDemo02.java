@@ -15,7 +15,7 @@ public class ServerDemo02 {
     public static void main(String[] args) throws Exception {
         System.out.println("----服务端启动----");
         // 1.注册端口: public ServerSocket(int port)
-        ServerSocket serverSocket = new ServerSocket(9999);
+        ServerSocket serverSocket = new ServerSocket(7777);
         // 2.定义一个循环不断的接收客户端的连接请求
         while(true){
             // 3.开始等待接收客户端的Socket管道连接。
