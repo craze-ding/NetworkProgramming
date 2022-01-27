@@ -32,9 +32,9 @@ public class FileInputStreamDemo03 {
        String rs = new String(buffer);
        System.out.println(rs);*/
 
-       /* byte[] buffer = is.;
+        byte[] buffer = is.readAllBytes();//此API，sice SDK9！！！
         String rs = new String(buffer);
-        System.out.println(rs);*/
+        System.out.println(rs);
 
     }
 }
