@@ -1,5 +1,9 @@
 package edu.learn.io._03字节流的使用;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 /**
     目标：字节输出流的使用。
 
@@ -29,6 +33,21 @@ package edu.learn.io._03字节流的使用;
         关闭和刷新：刷新流可以继续使用，关闭包含刷新数据但是流就不能使用了！
  */
 public class OutputStreamDemo04 {
+    public static void main(String[] args) throws IOException {
+        // FileOutputStream outputStream = new FileOutputStream("src/edu/learn/io/dlei01.txt");//覆盖
+        FileOutputStream outputStream = new FileOutputStream("src/edu/learn/io/dlei01.txt",true);//追加
+        //  1.  写一个字节出去 。
+        outputStream.write(111);
+        outputStream.write('A');
+        outputStream.write('我');//中文3个字节，只取第一个字节
+        outputStream.write("\r\n".getBytes());//换行
+    //   2. 写一个字节数组出去。
+        outputStream.write("Java是最好的语言！".getBytes());
+        outputStream.write("\r\n".getBytes());//换行
+    //   3.写一个字节数组的一部分出去
+        outputStream.write("Java是最好的语言！".getBytes(),0,16);
+        outputStream.write("\r\n".getBytes());//换行
+    }
 
 
 }
