@@ -40,17 +40,18 @@ public class FileDemo01 {
         //      -- a.使用正斜杠： /
         //      -- b.使用反斜杠： \\
         //      -- c.使用分隔符API:File.separator
-        //File f1 = new File("D:/itcast/图片资源/beautiful.jpg");
-        //File f1 = new File("D:"+File.separator+"itcast"+File.separator+"图片资源"+File.separator+"beautiful.jpg");
-        File f1 = new File("D:\\itcast\\图片资源\\beautiful.jpg");
-        System.out.println(f1.length()); // 获取文件的大小，字节大小
+        //File f1 = new File("D:/图片资源/beautiful.jpg");
+        //File f1 = new File("D:"+File.separator+"xxxx"+File.separator+"图片资源"+File.separator+"beautiful.jpg");
+        File f1 = new File("C:\\Users\\leet_\\OneDrive\\图片\\IU\\5d8ae4b6b510181da19319348bbc1c50.jpeg");
+        // f1.getParentFile().delete();
+        System.out.println(f1.length()); // 获取文件的大小，字节大小.以文件属性为主,有时候你自己可能算得不准！
 
         // 2.创建文件对象：使用相对路径
-        File f2 = new File("Day09Demo/src/dlei01.txt");
+        File f2 = new File("src/edu/learn/file/dlei01.txt");
         System.out.println(f2.length());
 
         // 3.创建文件对象：代表文件夹。
-        File f3 = new File("D:\\itcast\\图片资源");
+        File f3 = new File("D:\\图片资源");
         System.out.println(f3.exists());// 判断路径是否存在！！
     }
 }

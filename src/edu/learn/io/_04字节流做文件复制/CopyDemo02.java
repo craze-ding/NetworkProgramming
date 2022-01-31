@@ -7,7 +7,7 @@ import java.io.OutputStream;
 
 /**
     目标：JDK 1.7开始之后释放资源的新方式
-
+        try（）是圆括号而不是花括号！
     try-with-resources:
          try(
                 // 这里只能放置资源对象，用完会自动调用close()关闭
@@ -24,9 +24,9 @@ public class CopyDemo02 {
     public static void main(String[] args) {
         try(
                 /** （1）创建一个字节输入流管道与源文件接通。 */
-                InputStream is  = new FileInputStream("D:\\xxzz\\图片资源\\xxx.jpg");
+                InputStream is  = new FileInputStream("C:\\Users\\leet_\\OneDrive\\图片\\IU\\cc9c98848b6064915a335180d395a7fa.jpeg");
                 /** （2）创建一个字节输出流与目标文件接通。*/
-                OutputStream os = new FileOutputStream("D:\\xxxx\\xxxx.jpg");
+                OutputStream os = new FileOutputStream("D:\\约吧图片服务器\\cc9c98848b6064915a335180d395a7fa.jpeg");
                 /** （5）关闭资源！是自动进行的 */
         ){
             /** （3）创建一个字节数组作为桶*/

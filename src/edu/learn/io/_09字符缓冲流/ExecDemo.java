@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -43,16 +44,16 @@ public class ExecDemo {
             List<Character> sizes = new ArrayList<>();
             Collections.addAll(sizes,'零','一','二','三','四','五','六','七','八','九','十');
             // （4）对List集合中的每个元素按照首字符排序。
-//          Collections.sort(datas, new Comparator<String>() {
-//                @Override
-//                public int compare(String s1, String s2) {
-//                    // s1  三.侍中...
-//                    // s2  八.愿陛....
-//                    // indexOf获取元素在List集合中的索引。
-//                    return sizes.indexOf(s1.charAt(0)) - sizes.indexOf(s2.charAt(0));
-//                }
-//          });
-            Collections.sort(datas, ( s1,  s2) ->sizes.indexOf(s1.charAt(0)) - sizes.indexOf(s2.charAt(0)));
+         Collections.sort(datas, new Comparator<String>() {
+               @Override
+               public int compare(String s1, String s2) {
+                   // s1  三.侍中...
+                   // s2  八.愿陛....
+                   // indexOf获取元素在List集合中的索引。
+                   return sizes.indexOf(s1.charAt(0)) - sizes.indexOf(s2.charAt(0));
+               }
+         });
+//             Collections.sort(datas, Comparator.comparingInt(s -> sizes.indexOf(s.charAt(0))));
             System.out.println(datas);
 
             //  （6）遍历List集合中的每个元素，通过缓冲字符输出管道写出到目标文件。

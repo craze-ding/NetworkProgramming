@@ -1,7 +1,6 @@
 package edu.learn.file._04File类的创建和删除的方法;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 /**
      目标：File类的创建和删除的方法
@@ -13,22 +12,23 @@ import java.io.IOException;
  */
 public class FileDemo {
     public static void main(String[] args) throws IOException {
-        File f = new File("Day09Demo/src/dlei02.txt");
+        File f = new File("src/edu/learn/file/dlei02.txt");
         // a.创建新文件，创建成功返回true ,反之
         System.out.println(f.createNewFile());
-
         // b.删除文件或者空文件夹
         System.out.println(f.delete());
+
         // 不能删除非空文件夹，只能删除空文件夹
-        File f1 = new File("D:/itcast/aaaaa");
+        File f1 = new File("D:/aaaaa");
         System.out.println(f1.delete());
 
         // c.创建一级目录
-        File f2 = new File("D:/itcast/bbbb");
+        File f2 = new File("D:/bbbb");
         System.out.println(f2.mkdir());
+        f2.delete();
 
         // d.创建多级目录
-        File f3 = new File("D:/itcast/e/a/d/ds/fas/fas/fas/fas/fas/fas");
+        File f3 = new File("D:/e/a/d/ds/fas/fas/fas/fas/fas/fas");
         System.out.println(f3.mkdirs());
     }
 }

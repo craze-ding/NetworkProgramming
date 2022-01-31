@@ -11,7 +11,7 @@ import java.io.File;
 public class FileDemo {
     public static void main(String[] args) {
         // 1.绝对路径创建一个文件对象
-        File f1 = new File("D:/itcast/图片资源/meinv.jpg");
+        File f1 = new File("C:\\Users\\leet_\\OneDrive\\图片\\IU\\5d8ae4b6b510181da19319348bbc1c50.jpeg");
         // a.获取它的绝对路径。
         System.out.println(f1.getAbsolutePath());
         // b.获取文件定义的时候使用的路径。
@@ -24,14 +24,15 @@ public class FileDemo {
         System.out.println("------------------------");
 
         // 2.相对路径
-        File f2 = new File("Day09Demo/src/dlei01.txt");
+        // File f2 = new File("src/dlei01.txt");
+        File f2 = new File("src/edu/learn/file/dlei01.txt");
         // a.获取它的绝对路径。
         System.out.println(f2.getAbsolutePath());
         // b.获取文件定义的时候使用的路径。
         System.out.println(f2.getPath());
         // c.获取文件的名称：带后缀。
         System.out.println(f2.getName());
-        // d.获取文件的大小：字节个数。
+        // d.获取文件的大小：字节个数。如果是文件夹，就是它本身的大小，而不是你通过属性看到的！
         System.out.println(f2.length());
     }
 }

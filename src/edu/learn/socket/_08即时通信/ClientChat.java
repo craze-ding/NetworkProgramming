@@ -9,10 +9,9 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
 
-/**
- * @Author xlei(徐磊)
- * 客户端界面
- */
+/*
+* 客户端界面*/
+
 public class ClientChat implements ActionListener {
 	/** 1.设计界面  */
 	private JFrame win = new JFrame();

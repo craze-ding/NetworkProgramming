@@ -11,8 +11,8 @@ import java.io.*;
         复制是把源文件的全部字节一字不漏的转移到目标文件，只要文件前后的格式一样，绝对不会有问题。
 
     需求：
-        原文件：D:\itcast\图片资源\meinv.jpg
-        目标文件：D:\itcast\meimei.jpg
+        原文件：C:\Users\leet_\OneDrive\图片\IU\cc9c98848b6064915a335180d395a7fa.jpeg
+        目标文件：D:\约吧图片服务器\cc9c98848b6064915a335180d395a7fa.jpeg
     分析步骤：
         （1）创建一个字节输入流管道与源文件接通。
         （2）创建一个字节输出流与目标文件接通。
@@ -30,7 +30,7 @@ public class CopyDemo01 {
             /** （1）创建一个字节输入流管道与源文件接通。 */
             is = new FileInputStream("C:\\Users\\leet_\\OneDrive\\图片\\IU\\cc9c98848b6064915a335180d395a7fa.jpeg");
             /** （2）创建一个字节输出流与目标文件接通。*/
-            os = new FileOutputStream("C:\\Users\\leet_\\Desktop\\NetworkProgramming\\src\\edu\\learn\\io\\iu.jpeg");
+            os = new FileOutputStream("D:\\约吧图片服务器\\cc9c98848b6064915a335180d395a7fa.jpeg");
             /** （3）创建一个字节数组作为桶*/
             byte[] buffer = new byte[1024];
             /** （4）从字节输入流管道中读取数据，写出到字节输出流管道即可。*/

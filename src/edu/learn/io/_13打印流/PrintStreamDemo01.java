@@ -20,10 +20,10 @@ import java.io.*;
 public class PrintStreamDemo01 {
     public static void main(String[] args) throws Exception {
         // 1.打印流PrintStream
-        //OutputStream os = new FileOutputStream("Day10Demo/src/dlei08.txt");
+        //OutputStream os = new FileOutputStream("src/edu/learn/io/dlei08.txt");
         //PrintStream ps = new PrintStream(os);
-        PrintStream ps = new  PrintStream("Day10Demo/src/dlei08.txt");
-        //PrintWriter pw = new  PrintWriter("Day10Demo/src/dlei08.txt");
+        PrintStream ps = new  PrintStream("src/edu/learn/io/dlei08.txt");
+        //PrintWriter pw = new  PrintWriter("src/edu/learn/io/dlei08.txt");
 
         ps.println(97); // 写97
         ps.println(110); // 写110

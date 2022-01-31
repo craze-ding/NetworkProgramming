@@ -30,7 +30,7 @@ public class FileInputStreamDemo02 {
     public static void main(String[] args) throws Exception {
         // 需求：读取文件中的数据输出。
         // 1.创建一个文件对象
-        //File srcFile = new File("Day09Demo/src/dlei02.txt");
+        //File srcFile = new File("src/dlei02.txt");
         // 2.创建一个字节输入流管道与源文件对象接通。
         //InputStream is = new FileInputStream(srcFile);
 

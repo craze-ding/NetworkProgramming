@@ -12,6 +12,7 @@ package edu.learn.file._06递归的概述和应用理论;
          递归是自己调用自己。
          递归如果控制的不恰当，会形成递归的死循环，从而导致栈内存溢出错误！！
          递归应该防止进入递归的死循环！
+ Exception in thread "main" java.lang.StackOverflowError:没有终止条件！
 
  */
 public class RecursionDemo01 {

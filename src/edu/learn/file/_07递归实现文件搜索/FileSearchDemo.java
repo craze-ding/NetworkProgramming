@@ -6,7 +6,7 @@ import java.io.IOException;
 /**
     目标：递归实现文件搜索(非规律递归)
 
-    需求：希望去D:/soft目录寻找出eclipse.exe文件。
+    需求：希望去D:\leet目录寻找出notepad++.exe文件并且执行。
 
     分析：
         （1）定义一个方法用于做搜索。
@@ -17,7 +17,7 @@ import java.io.IOException;
 public class FileSearchDemo {
     public static void main(String[] args) {
         // 搜索调用方法
-        searchFiles(new File("D:/soft") , "eclipse.exe");
+        searchFiles(new File("D:\\leet") , "notepad++.exe");
     }
 
     /**

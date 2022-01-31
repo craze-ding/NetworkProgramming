@@ -10,10 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * @Author
- * @Email dlei0009@163.com
- */
+
+/**/
 public class ServerChat {
 
 	/** 定义一个集合存放所有在线的socket  */

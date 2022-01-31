@@ -11,19 +11,19 @@ import java.io.*;
         （3）使用高级的缓冲字节流按照一个一个字节的形式复制文件。
         （4）使用高级的缓冲字节流按照一个一个字节数组的形式复制文件。
 
-    源文件：‪F:\Java开发\java\第1阶段Java基础+编程强化\java基础回顾资料\java基础回顾资料\回顾视频\第十天视频\07.字节缓冲流的性能分析.avi
-    目标文件：D:\new新视频.avi
+    源文件：‪E:\录屏\林白奇\IMG_4371.MP4
+    目标文件：D:\demo\IMG_4371.MP4（目录要存在！）
 
     小结：
         高级的字节缓冲流按照一个一个字节数组的形式复制性能极高，建议以后使用！
  */
 public class CopyDemo {
-    public static final String SRC_FILE = "F:\\Java开发\\java\\第1阶段Java基础+编程强化\\java基础回顾资料\\java基础回顾资料\\回顾视频\\第十天视频\\07.字节缓冲流的性能分析.avi";
+    public static final String SRC_FILE = "E:\\录屏\\林白奇\\IMG_4371.MP4";
     public static final String DEST_FIlE = "D:\\demo\\";
     public static void main(String[] args) {
         // copy01(); // 低级流一个一个字节复制，速度太慢，简直让人无法忍受，直接淘汰，禁止使用！
-        copy02(); // 低级的字节流按照一个一个字节数组的形式复制 ,读取较慢。5.264s
-        copy03(); // 高级的缓冲字节流按照一个一个字节的形式复制 ,读取较慢。4.032s
+        // copy02(); // 低级的字节流按照一个一个字节数组的形式复制 ,读取较慢。5.264s
+        // copy03(); // 高级的缓冲字节流按照一个一个字节的形式复制 ,读取较慢。4.032s
         copy04(); // 高级的字节缓冲流按照一个一个字节数组的形式复制,速度极快。建议使用 0.71s
     }
 
@@ -34,7 +34,7 @@ public class CopyDemo {
                 // 1.创建一个低级的字节输入流与源文件接通
                 InputStream is = new FileInputStream(SRC_FILE);
                 // 2.创建一个敌机的字节输出流管道与目标文件接通
-                OutputStream os = new FileOutputStream(DEST_FIlE+"01.avi");
+                OutputStream os = new FileOutputStream(DEST_FIlE+"01.MP4");
                 ){
                 // 3.定义一个整型变量存储读取的字节。
                 int ch ;
@@ -55,7 +55,7 @@ public class CopyDemo {
                 // 1.创建一个低级的字节输入流与源文件接通
                 InputStream is = new FileInputStream(SRC_FILE);
                 // 2.创建一个敌机的字节输出流管道与目标文件接通
-                OutputStream os = new FileOutputStream(DEST_FIlE+"02.avi");
+                OutputStream os = new FileOutputStream(DEST_FIlE+"02.MP4");
         ){
             // 3.定义一个字节数组存储字节
             byte[] buffer = new byte[1024];
@@ -79,7 +79,7 @@ public class CopyDemo {
                 InputStream is = new FileInputStream(SRC_FILE);
                 BufferedInputStream bis = new BufferedInputStream(is);
                 // 2.创建一个敌机的字节输出流管道与目标文件接通
-                OutputStream os = new FileOutputStream(DEST_FIlE+"03.avi");
+                OutputStream os = new FileOutputStream(DEST_FIlE+"03.MP4");
                 BufferedOutputStream bos = new BufferedOutputStream(os);
         ){
             // 3.定义一个整型变量存储读取的字节。
@@ -102,7 +102,7 @@ public class CopyDemo {
                 InputStream is = new FileInputStream(SRC_FILE);
                 BufferedInputStream bis = new BufferedInputStream(is);
                 // 2.创建一个敌机的字节输出流管道与目标文件接通
-                OutputStream os = new FileOutputStream(DEST_FIlE+"04.avi");
+                OutputStream os = new FileOutputStream(DEST_FIlE+"04.MP4");
                 BufferedOutputStream bos = new BufferedOutputStream(os);
         ){
             // 3.定义一个字节数组存储字节
